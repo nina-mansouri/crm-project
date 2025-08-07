@@ -21,7 +21,7 @@ function CustomerEditPage({ data, id }) {
     router.push("/");
   };
   const editHandler = async () => {
-    const res = await fetch(`${process.env.BASE_URL}/api/edit/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/edit/${id}`, {
       method: "PATCH",
       body: JSON.stringify({ data: form }),
       headers: { "Content-Type": "application/json" },
